@@ -11,10 +11,10 @@
         tools:layout="@layout/login" >
         <action
             android:id="@+id/action_login_to_register"
-            app:destination="@id/register" />
+            app:destination="@id/login" />
     </fragment>
     <fragment
-        android:id="@+id/register"
+        android:id="@+id/login"
         android:name="com.example.project.Register"
         android:label="register"
         tools:layout="@layout/register" />
