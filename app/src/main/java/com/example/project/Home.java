@@ -3,10 +3,12 @@ package com.example.project;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class Home extends Fragment {
     public Home() { }
@@ -21,6 +23,11 @@ public class Home extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        User loggedUser;
+
+        TextView greetings = this.getActivity().findViewById(R.id.greetings);
+        greetings.setText("Welcome, " + loggedUser.getNickname() + "!");
     }
 
     @Override
