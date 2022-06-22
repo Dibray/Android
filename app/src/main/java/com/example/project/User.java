@@ -12,21 +12,15 @@ public class User {
     private String password;
     private String nickname;
 
-    public User(String email, String pass) {
-        setEmail(email);
-        setPassword(pass);
-        setNickname();
-    }
-
     private long getId() {
         return id;
     }
 
-    private String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    private String getPassword() {
+    public String getPassword() {
         return password;
     }
 
@@ -49,5 +43,11 @@ public class User {
 
     private void setNickname() {
         this.nickname = email;
+    }
+
+    public User(String email, String pass) {
+        setEmail(email);
+        setPassword(pass);
+        setNickname();
     }
 }

@@ -7,9 +7,13 @@ import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -29,12 +33,25 @@ public class Login extends Fragment {
         super.onCreate(savedInstanceState);
 
         Button submitLogin = this.getActivity().findViewById(R.id.submitLogin);
-        submitLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Navigate to HomeScreen
-            }
+        submitLogin.setOnClickListener(view -> {
+            LoginViewModel model = new ViewModelProvider(this).get(LoginViewModel.class);
+
+            TextView email = this.getActivity().findViewById(R.id.email);
+            TextView password = this.getActivity().findViewById(R.id.password);
+
+            model.setEmail(email.toString());
+            model.setPassword(password.toString());
+
+            for (User u : model.getUsers().getValue())
+                if (model.getEmail() == u.getEmail() && model.getPassword() == u.getPassword())
+                    ; // Navigate to HomeScreen
         });
+
+        Button signIn = this.getActivity().findViewById(R.id.signIn);
+        signIn.setOnClickListener(view -> {
+            // Navigate to Register
+        });
+
     }
 
     @Override
