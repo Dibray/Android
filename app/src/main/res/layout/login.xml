@@ -67,7 +67,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/submitLogin"
+        android:id="@+id/submitRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -110,6 +110,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submitLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/submitRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

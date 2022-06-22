@@ -78,7 +78,7 @@ tools:context=".Register">
     android:hint="Confirm Password"
     android:inputType="textPassword"
     android:textSize="20sp"
-    app:layout_constraintBottom_toTopOf="@+id/submitLogin"
+    app:layout_constraintBottom_toTopOf="@+id/submitRegister"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toEndOf="@+id/lockerPic2"
@@ -86,7 +86,7 @@ tools:context=".Register">
     app:layout_constraintTop_toBottomOf="@+id/password" />
 
 <Button
-    android:id="@+id/submitLogin"
+    android:id="@+id/submitRegister"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Register"
