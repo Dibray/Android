@@ -29,7 +29,7 @@ public class Register extends Fragment {
 
         RegisterViewModel model = new ViewModelProvider(this).get(RegisterViewModel.class);
 
-        Button submitRegister = this.getActivity().findViewById(R.id.submitRegister);
+        Button submitRegister = this.getActivity().findViewById(R.id.submitLogin);
         submitRegister.setOnClickListener(view -> {
             TextView email = this.getActivity().findViewById(R.id.email);
             TextView password = this.getActivity().findViewById(R.id.password);
@@ -44,7 +44,7 @@ public class Register extends Fragment {
 
                 model.insert(u);
 
-                // Navigate to HomeView
+                // Navigate to HomeScreen
             }
         });
     }

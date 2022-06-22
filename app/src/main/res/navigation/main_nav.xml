@@ -11,11 +11,23 @@
         tools:layout="@layout/login" >
         <action
             android:id="@+id/action_login_to_register"
-            app:destination="@id/login" />
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_login_to_homeScreen"
+            app:destination="@id/homeScreen" />
     </fragment>
     <fragment
-        android:id="@+id/login"
+        android:id="@+id/register"
         android:name="com.example.project.Register"
         android:label="register"
-        tools:layout="@layout/register" />
+        tools:layout="@layout/register" >
+        <action
+            android:id="@+id/action_register_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.project.Home"
+        android:label="home"
+        tools:layout="@layout/home" />
 </navigation>
