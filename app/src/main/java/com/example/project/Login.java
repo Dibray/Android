@@ -44,7 +44,11 @@ public class Login extends Fragment {
 
             for (User u : model.getUsers().getValue())
                 if (model.getEmail() == u.getEmail() && model.getPassword() == u.getPassword())
-                    ; // Navigate to HomeScreen
+                {
+                    new ViewModelProvider(this).get(CurrentUserViewModel.class).setLoggedUser(u);
+
+                    // Navigate to HomeScreen
+                }
         });
 
         Button signIn = this.getActivity().findViewById(R.id.signIn);

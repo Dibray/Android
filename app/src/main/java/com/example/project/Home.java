@@ -23,8 +23,10 @@ public class Home extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        User loggedUser;
+
+        CurrentUserViewModel currentUser = new ViewModelProvider(this).get(CurrentUserViewModel.class);
+
+        User loggedUser = currentUser.getLoggedUser();
 
         TextView greetings = this.getActivity().findViewById(R.id.greetings);
         greetings.setText("Welcome, " + loggedUser.getNickname() + "!");

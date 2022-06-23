@@ -44,6 +44,8 @@ public class Register extends Fragment {
 
                 model.insert(u);
 
+                new ViewModelProvider(this).get(CurrentUserViewModel.class).setLoggedUser(u);
+
                 // Navigate to HomeScreen
             }
         });
