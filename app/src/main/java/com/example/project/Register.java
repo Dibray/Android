@@ -46,7 +46,7 @@ public class Register extends Fragment {
 
                 new ViewModelProvider(this).get(CurrentUserViewModel.class).setLoggedUser(u);
 
-                // Navigate to HomeScreen
+                MainActivity.getFragments().navigate(R.id.homeScreen);
             }
         });
     }
@@ -54,7 +54,6 @@ public class Register extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.register, container, false);
     }
 }

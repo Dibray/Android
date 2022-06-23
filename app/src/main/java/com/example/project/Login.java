@@ -47,13 +47,13 @@ public class Login extends Fragment {
                 {
                     new ViewModelProvider(this).get(CurrentUserViewModel.class).setLoggedUser(u);
 
-                    // Navigate to HomeScreen
+                    MainActivity.getFragments().navigate(R.id.homeScreen);
                 }
         });
 
         Button signIn = this.getActivity().findViewById(R.id.signIn);
         signIn.setOnClickListener(view -> {
-            // Navigate to Register
+            MainActivity.getFragments().navigate(R.id.register);
         });
 
     }
